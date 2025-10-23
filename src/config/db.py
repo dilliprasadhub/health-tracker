@@ -1,0 +1,3 @@
+from supabase import create_client
+
+db=create_client("https://esrhyntnvtjxvlifvagb.supabase.co","eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVzcmh5bnRudnRqeHZsaWZ2YWdiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk5MTcxMzMsImV4cCI6MjA3NTQ5MzEzM30.V7hScikYzGPfVSiCMrp_Ziwlcpt97ac_Q3-DpreIaU4")

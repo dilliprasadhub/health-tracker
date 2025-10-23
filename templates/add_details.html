@@ -1,0 +1,167 @@
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Health Details</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #1f2937;
+            font-size: 28px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .cancel-btn {
+            background: #e5e7eb;
+            color: #374151;
+        }
+
+        .cancel-btn:hover {
+            background: #d1d5db;
+        }
+
+        /* Back button styling */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 25px;
+            background: none;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/dashboard" class="back-btn" style="text-decoration: none;">← Back to Dashboard</a>
+        <h1>Add Health Details</h1>
+        <form action="/add/details" method="Post">
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" name="weight" placeholder="70" step="0.1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bloodPressure">Blood Pressure</label>
+                <input type="text" id="bloodPressure" name="bloodPressure" placeholder="120/80" required>
+            </div>
+
+            <div class="form-group">
+                <label for="heartRate">Heart Rate (bpm)</label>
+                <input type="number" id="heartRate" name="heartRate" placeholder="72" required>
+            </div>
+
+            <div class="form-group">
+                <label for="steps">Steps</label>
+                <input type="number" id="steps" name="steps" placeholder="8500" required>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Save Details</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
